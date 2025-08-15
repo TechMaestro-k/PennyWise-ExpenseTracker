@@ -13,6 +13,7 @@ const generateToken=(id)=>{
 }
 
 exports.registerUser = async (req,res)=>{
+    console.log("Start register")
     const {fullName , email , password , profileImageUrl }=req.body;
 
     if(!fullName || !email || !password){
@@ -27,6 +28,7 @@ exports.registerUser = async (req,res)=>{
         }
 
         //create a new user if not exists
+        console.log("creating user")
         const user=await User.create({
             fullName,
             email,
@@ -39,6 +41,7 @@ exports.registerUser = async (req,res)=>{
             user,
             token: generateToken(user._id),
         })
+        console.log("ending register")
     }catch(err){
         res.status(500).json({message:"Error registring user",error :err.message});
         }
