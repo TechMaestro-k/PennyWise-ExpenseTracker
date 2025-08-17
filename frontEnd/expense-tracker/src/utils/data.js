@@ -17,7 +17,7 @@ export const SIDE_MENU_DATA=[{
     path:'/income'
 },{
     id:"03",
-    label:"Expene",
+    label:"Expense",
     icon:LuHandCoins,
     path:"/expense"
 },{
