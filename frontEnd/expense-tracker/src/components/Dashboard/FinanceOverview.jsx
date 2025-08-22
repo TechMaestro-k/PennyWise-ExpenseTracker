@@ -8,7 +8,7 @@ const FinanceOverview=({totalBalance,totalExpense,totalIncome})=>{
     const balanceData=[
         {name:'Total Balance',amount:totalBalance},
         {name:'Total Income',amount:totalIncome},
-        {name:'total Expense',amount:totalExpense}
+        {name:'Total Expense',amount:totalExpense}
     ]
 
   return (
